@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="shortcut icon" href="../logo_parsohi.png" type="image/x-icon">
+    <title>Closer to Home Closer to Taste</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="loader">
+        <h1>paroshi</h1>
+    </div>
+
+
+
+    <div id="main-body">
+<!-- header  -->
+<div class="header">
+    <div class="navbar-main">
+      <div id="nav-menu" onclick="shownavbar()">
+  <img id="menu-img" src="../menu.png" width="50" height="50" alt="">
+      </div>
+        <div id="navbar-n-res">
+       <div id="n-navbar-n-res">
+        <ul>
+            <a href="index.html"><li>Home</li></a> <br><br><br><br>
+            <a href="menu.html"><li>Menu</li></a><br><br><br><br>
+            <a href="https://maps.app.goo.gl/7jsN1UukgAM9ySvz8"><li>Location</li></a>
+        </ul>
+       </div>
+        </div>
+        <div class="navbar-res">
+            <ul>
+                <a href="index.html" id="home"><li>Home</li></a>
+                <a href="menu.html" id="menu"><li>Menu</li></a>
+                <a href="https://maps.app.goo.gl/7jsN1UukgAM9ySvz8" id="location"><li>Location</li></a>
+            </ul>
+        </div>
+        </div>
+        <!-- heading  -->
+        <div class="head-head">
+            <div class="header-heading" id="h-h-head">
+                <h1 id="res-h">paroshi</h1>
+                <h1 id="res-h-n">paroshi</h1>
+
+                <br>Closer to Home | Close to Taste
+             </div>
+        </div>
+</div>
+
+<!-- reviews  -->
+<br><br><br><br><br>
+<div class="reviews">
+    <h3>What people think about paroshi ? </h3><br><br>
+    <div class="f-review"><div class="para-f-p">"Took a takeaway from this shop after a recommendation from my friend
+        Took chilli chicken and fried rice as parcel and it was delicious 😋
+        The price charged according to the quantity is also sufficient enough
+        One combo is enough to fill one’s stomach ❤️
+        Keep such quality in future too🙏."</div><div class="name-f-r">- Samir Kumar</div></div>
+        <br><br><br>
+        <div class="f-review"><div class="para-f-p">" recently tried the Chili Cheese
+             Stuffed Mushrooms and was blown away by the explosive flavors! The combination
+              of spicy chili, melted cheese and earthy mushrooms created a delightful harmony.
+              </div><div class="name-f-r">- Snighdha Ghosh</div></div>
+      
+</div>
+
+
+<!-- timing -->
+ <div class="time">
+    <div class="time-d">
+        <h1 id="time-now" onclick="shownavbar()">12:00 PM</h1><br>
+        <div class="t">
+            <img src="" id="time-img" alt="">
+        <br>
+        <h3 id="time-desc"></h3>
+        </div>
+    </div>
+ </div>
+
+<!-- images outlet  -->
+
+
+<!-- footer  -->
+ <footer>
+    <div class="details">
+        <div class="loc">
+            <a href="https://maps.app.goo.gl/ivMjt8Cs9sC8Mo5P8">
+                64/1/1, Dharmatala Rd, Belur, Bally, Howrah, West Bengal 711201
+            </a>
+        </div>
+        <div class="creator">Developed by Ayush Shrestha</div>
+    </div>
+ </footer>
+    </div>
+</body>
+
+<script>
+var m=""
+var hr=""
+var t="AM"
+var src=""
+var desc=""
+var currentTime = new Date()
+var hours = currentTime.getHours()
+var minutes = currentTime.getMinutes()
+if(minutes<=9)
+m="0"+minutes
+else
+m=minutes
+if(hours<=9)
+hr="0"+minutes
+else
+hr=hours-12
+if(hours>=12)
+t="PM"
+document.getElementById('time-now').innerText=`${hr}:${m} ${t}`
+
+
+if(hours>=13 && hours<=23)
+{src="../undraw_Trip_re_f724.png"
+    desc="Take Your Car out ! Our Outlet is open till 11 PM"
+}
+else if(hours>=24){
+    src="../undraw_Warning_re_eoyh.png"
+    desc="You are too late ! Our outlet is closed now"
+}
+else if(hours<13){
+    src="../undraw_Warning_re_eoyh.png"
+    desc="You are too early ! Our outlet is closed now"
+}
+document.getElementById('time-desc').innerHTML=desc
+document.getElementById('time-img').src=src
+
+function shownavbar(){
+   
+if(document.getElementById('n-navbar-n-res').style.display=='none'){
+// document.getElementById('h-h-head').style.display='none'
+document.getElementById('n-navbar-n-res').style.display='block'
+document.getElementById('menu-img').src='../icons8-cross-60.png'
+document.getElementById('res-h').style.display='none'
+}
+else{
+    // document.getElementById('h-h-head').style.display='block'
+document.getElementById('n-navbar-n-res').style.display='none'
+document.getElementById('menu-img').src='../menu.png'
+document.getElementById('res-h').style.display='block'
+
+}
+}
+
+
+
+window.addEventListener('load',()=>{
+    document.getElementById('main-body').style.display='block'
+    document.getElementById('loader').style.display='none'
+
+})
+
+
+</script>
+
+
+</html>

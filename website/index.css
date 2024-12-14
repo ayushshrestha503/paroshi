@@ -1,0 +1,93 @@
+*{margin: 0;padding: 0; font-family: "Varela Round", serif;z-index: 1;
+animation: slow infinite 2s;animation-timeline:view();animation-range:entry ;opacity: 1;scale: 1;
+}body{background: whitesmoke;}#main-body{display: none;}
+/* @keyframes slow{from{opacity: 0;scale:0.5;}to{opacity: 1;scale: 1;}} */
+/* header  */
+.header{background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url('../landing_bg.jpg');
+height: 90vh;width: 100%;background-size:cover;background-position: center;background-repeat: no-repeat;
+}
+
+
+
+
+li #drinks{color: white;background: grey;}
+
+
+
+
+
+
+
+
+
+
+
+
+#loader{display: flex;align-items: center;height: 100vh;justify-content: center;}
+#loader h1{font-size: 55px;color: rgb(192, 191, 191);font-style: italic;}
+
+
+#res-h{display: none;}
+#res-h-n{display: block;}
+
+
+.header-heading{text-align: center;padding-top:10rem;color: white;}.header-heading h1{font-size:50px;}
+/* heaader */
+.head-head{display: block;}
+
+#menu-img{transition: 0.5s;}
+/* navabr */#nav-menu{margin-left: 2rem;display: none;}
+.navbar-main{padding-top: 2rem;}
+ul a{list-style:none;color: white;text-decoration: none;font-size: 17px;}
+
+#navbar-n-res{display: none;}
+#n-navbar-n-res{position: absolute;background: white;width: 100%;padding-top: 3rem;
+    display: none;
+padding-bottom:85%;}
+#n-navbar-n-res ul a{color: black;display: flex;justify-content: center;align-items: center;
+flex-direction: column;margin-top:2rem;}
+
+
+#home{opacity: 0.7;}
+.navbar-res ul{display: flex;justify-content: center;}.navbar-res ul a{margin-left: 7rem;margin-right: 7rem;}
+/* navabr */
+
+/* reviews */
+.reviews{margin: 3rem;background: white;padding: 4rem;padding-bottom: 3rem;}.reviews h3{font-size: 30px;position: relative;}.reviews h3::after{
+    content:" ";width: 200px;height:3px;background: black;position: absolute;left: 3px;
+    right: 0;margin-top:38px;}.f-review{display: flex;align-items: center;justify-content:space-between;}
+    .name-f-r{width: 180px;}.para-f-p{width:55%;}.pfp{display: inline-block;}
+
+/* time  */
+.time{margin: 3rem;background: white;padding: 4rem;padding-bottom: 3rem;}.t{text-align: center;}
+#time-img{width: 300px;height: 250px;}
+
+
+    /* footer  */
+footer{background: black;font-weight: 200;padding:1rem;padding-left:5rem;padding-right: 5rem;}.details a{color: whitesmoke;text-decoration: none;}
+.details {font-size: 12px;color: whitesmoke;display: flex;justify-content: space-between;align-items: center;}
+
+/* responsive */
+@media(max-width:850px){
+.header{background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url('../pexels-valeriya-29653136.jpg');}
+    .navbar-res{display: none;}.header-heading{ color: white;}.header-heading h1{font-size:50px;}
+    #time-img{width: 150px;height: 100px;}.details{display: block;text-align: center;}.loc{margin-bottom: 1rem;}
+    #nav-menu{display: block;}#navbar-n-res{display: block;}
+    .head-head{display: block;}
+    #res-h{display: block;}
+    #res-h-n{display: none;}
+
+}
+
+
+
+
+
+
+@media(max-width:600px){
+    .f-review{flex-direction:column;justify-content: center;}.reviews{text-align: center;}
+    .name-f-r{margin-top: 1rem;}
+}
+
+
+
